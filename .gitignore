@@ -1,0 +1,51 @@
+# Xcode Files Folders
+DerivedData/
+build/
+*.xcuserstate
+*.xcworkspace
+*.xcscheme
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+*.xcodeproj/xcuserdata/
+
+# Swift Package Manager (SPM) Files
+/.build/
+/Package.resolved
+/.swiftpm/
+
+# Dependencies Files
+Carthage/
+Pods/
+
+# Temps Files
+*.DS_Store
+*.swp
+*.swo
+
+# Custom Files
+*.env
+*.plist
+secrets.plist
+
+# Cache Files
+*.log
+*.tmp
+
+# Tools Config
+*.swiftpm/xcode/xcdebugger/
+*.swiftpm/xcode/xcdebugger/xcdebugger/
+
+# Xcode User Config
+*.xcuserdatad/
+*.xcuserdata/
+*.xcworkspace/
+
+# Test Files
+*.coverage
+*.coveragexml
+*.swiftpm/xcode/xcdebugger/
+
+# Swift Package Manager Config Files
+*.swiftpm/xcode/xcdebugger/
+
