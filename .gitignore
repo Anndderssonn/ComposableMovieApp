@@ -27,6 +27,7 @@ Pods/
 *.env
 *.plist
 secrets.plist
+Config.xcconfig
 
 # Cache Files
 *.log
