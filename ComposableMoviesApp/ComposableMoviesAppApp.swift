@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct ComposableMoviesAppApp: App {
     var body: some Scene {
+        let store = Store(reducer: appReducer, state: AppState(), middlewares: [moviesMiddleware()])
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(store)
         }
     }
 }

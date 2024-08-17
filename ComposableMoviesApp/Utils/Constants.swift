@@ -8,8 +8,8 @@
 import Foundation
 
 struct Constants {
-    private static let apiKey = Bundle.getConfigValues(key: "API_KEY")
-    private static let domainURL = Bundle.getConfigValues(key: "BASE_URL")
+    private static let apiKey = ""
+    private static let domainURL = "https://www.omdbapi.com"
     
     struct Urls {
         static func urlBySearch(search: String) -> String {
