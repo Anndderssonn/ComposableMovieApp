@@ -24,7 +24,7 @@ struct URLImage: View {
             }
         } else {
             return VStack {
-                Image("placeholder").resizable()
+                Image("no-image").resizable()
             }
         }
     }

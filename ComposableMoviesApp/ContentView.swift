@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: Store<AppState>
+    @State private var search: String = ""
     
     struct Props {
         let movies: [Movie]
@@ -24,16 +25,21 @@ struct ContentView: View {
     var body: some View {
         let props = map(state: store.state.movies)
         VStack {
+            TextField("Search", text: $search)
+                .onSubmit {
+                    props.onSearch(search)
+                }
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
             List(props.movies, id: \.omdbID) { movie in
-                MovieView(movie: movie)
+                NavigationLink(destination: MovieDetailView(movie: movie), label: {
+                    MovieView(movie: movie)
+                })
             }
             .listStyle(PlainListStyle())
         }
         .navigationTitle("Movies")
         .embedInNavigationView()
-        .onAppear(perform: {
-            props.onSearch("Star")
-        })
     }
 }
 
